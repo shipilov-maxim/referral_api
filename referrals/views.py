@@ -32,13 +32,6 @@ class ReferralCodeListView(ListAPIView):
 class GetReferralCodeView(generics.RetrieveAPIView):
     serializer_class = ReferralCodeSerializer
     queryset = ReferralCode.objects.all()
-    # lookup_field = 'referrer_email'
-    # lookup_url_kwarg = 'email'
-
-    # def get_queryset(self):
-    #     print(User.objects.filter(email=self.kwargs['referrer_email']))
-    #     return ReferralCode.objects.filter(pk=User.objects.filter(email=self.kwargs['referrer_email']).first().pk)
-    # queryset = ReferralCode.objects.filter(pk=self.kwargs['user_id'])
 
 
 class DeleteReferralCodeView(generics.DestroyAPIView):
